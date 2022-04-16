@@ -1,0 +1,22 @@
+@use "fonts" as *;
+
+$output-mode: "css" !default;
+
+@use "uniform" as * with (
+    $config: (
+
+        // Build settings - https://uniformcss.com/docs/build-settings/
+        delimiter: "\\:",
+        pseudo-delimiter: ":",
+        screen-delimiter: ":",
+        output: $output-mode,
+
+        // Theme settings - https://uniformcss.com/docs/theme-settings/
+        font-families: null,
+
+        // Theme Extensions
+        extend: (
+            font-families: $font-families,
+        ),
+    )
+);

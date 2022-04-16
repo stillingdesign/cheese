@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: stillingdesign/cheese
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "src/assets/img/uploads"
+public_folder: "/assets/img/uploads"
+collections:
+  # Blog Collection
+  - name: "articles" # Used in routes, e.g., /admin/collections/blog
+    label: "Articles" # Used in the UI
+    folder: "src/posts/articles" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "pages/_article.njk"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      # Titles
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "SEO Title", name: "seoTitle", widget: "string",}
+      - {label: "Social Title", name: "socialTitle", widget: "string",}
+      # Descriptions
+      - {label: "Summary", name: "summary", widget: "text"}
+      - {label: "SEO Description", name: "seoDescription", widget: "string",}
+      - {label: "Social Description", name: "socialDescription", widget: "string"}
+      # Images
+      - {label: "Hero Image", name: "heroImg", widget: "image"}
+      - {label: "Social Image", name: "socialImg", widget: "image"}
+      - {label: "Social Image Alt Text", name: "socialImgAlt", widget: "string", required: false}
+      # Relation Fields
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: [title]
+      - label: "Tag"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["title"]
+        value_field: "title"
+        display_fields: [title]
+      # Body
+      - {label: "Body", name: "body", widget: "markdown"}
+  # Authors Collection
+  - name: "authors" # Used in routes, e.g., /admin/collections/blog
+    label: "Authors" # Used in the UI
+    folder: "src/posts/authors" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "pages/_author.njk"}
+      # Titles
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Job Title", name: "job", widget: "string"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Social Title", name: "socialTitle", widget: "string",}
+      - {label: "SEO Title", name: "seoTitle", widget: "string",}
+      # Descriptions
+      - {label: "SEO Description", name: "seoDescription", widget: "string",}
+      - {label: "Social Description", name: "socialDescription", widget: "string",}
+      # Links
+      - {label: "LinkedIn", name: "linkedin", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "Instagram", name: "instagram", widget: "string", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
+      # Social Fields
+      - {label: "Profile Image", name: "profileImg", widget: "image"}
+      - {label: "Social Image", name: "socialImg", widget: "image"}
+      - {label: "Social Image Alt Text", name: "socialImgAlt", widget: "string", required: false}
+      # Body
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+  # Tags Collection
+  - name: "tags" # Used in routes, e.g., /admin/collections/blog
+    label: "Tags" # Used in the UI
+    folder: "src/posts/tags" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "pages/_tag.njk"}
+      # Titles
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Social Title", name: "socialTitle", widget: "string",}
+      - {label: "SEO Title", name: "seoTitle", widget: "string",}
+      # Descriptions
+      - {label: "Summary", name: "summary", widget: "string",}
+      - {label: "SEO Description", name: "seoDescription", widget: "string",}
+      - {label: "Social Description", name: "socialDescription", widget: "string",}
+      # Social Fields
+      - {label: "Profile Image", name: "profileImg", widget: "image"}
+      - {label: "Social Image", name: "socialImg", widget: "image"}
+      - {label: "Social Image Alt Text", name: "socialImgAlt", widget: "string", required: false}
+      # Body
+      - {label: "Body", name: "body", widget: "markdown", required: false}
