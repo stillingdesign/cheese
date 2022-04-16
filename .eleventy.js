@@ -7,6 +7,12 @@ module.exports = (function(eleventyConfig) {
     
     // Pass through images
     eleventyConfig.addPassthroughCopy("src/assets/img");
+
+    // Pass through fonts
+    eleventyConfig.addPassthroughCopy("src/assets/fonts");
+
+    // Pass through admin
+    eleventyConfig.addPassthroughCopy("src/admin");
     
     // Abbreviated Date Formatting
     eleventyConfig.addFilter("dateShort", (dateObj) => {
