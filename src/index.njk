@@ -17,5 +17,15 @@ changefreq: daily
         <a href="https://github.com/stillingdesign/cheese" target="_blank" class="flex px:12 py:8 semibold bg:lime-300 hover:bg:lime-400 transition:200 radius:md">
             View on GitHub
         </a>
+
+        <div class="flex flex:col align-items:stretch justify-content:start mt:24">
+            {% for article in collections.articles %}
+                <a href="{{ article.url }}" class="flex flex:col align-items:start justify-content:start p:24 max-w:320 bg:white radius:lg">
+                    <img src="{{ article.data.heroImg }}" alt="{{ article.data.socialImgAlt }}"/>
+                    <p>{{ article.data.title }}</p>
+                    <p>{{ article.data.summary }}</p>
+                </a>
+            {% endfor %}
+        </div>
     </div>
 </section>

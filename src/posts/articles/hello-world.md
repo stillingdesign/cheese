@@ -13,6 +13,6 @@ heroImg: /assets/img/uploads/test-hero.jpg
 socialImg: /assets/img/uploads/test-og.jpg
 socialImgAlt: Some cheese
 author: Mike Stilling
-tags: Opinion
+tags: opinion
 ---
 This is some test content
