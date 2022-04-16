@@ -88,7 +88,6 @@ collections:
       - {label: "SEO Description", name: "seoDescription", widget: "string",}
       - {label: "Social Description", name: "socialDescription", widget: "string",}
       # Social Fields
-      - {label: "Profile Image", name: "profileImg", widget: "image"}
       - {label: "Social Image", name: "socialImg", widget: "image"}
       - {label: "Social Image Alt Text", name: "socialImgAlt", widget: "string", required: false}
       # Body

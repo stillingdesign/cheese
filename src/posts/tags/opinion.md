@@ -6,7 +6,6 @@ seoTitle: Opinions - Cheese
 summary: some hot takes
 seoDescription: hot takes on design stuff
 socialDescription: hot takes on design stuff
-profileImg: /assets/img/uploads/test-og.jpg
 socialImg: /assets/img/uploads/test-og.jpg
 socialImgAlt: some cheese
 ---
