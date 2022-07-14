@@ -2,25 +2,25 @@
 <html lang="en">
 
 <!-- Head -->
-{% include "components/base/_head.njk" %}
+{% include "components/include.base.head.njk" %}
 
 <!-- Body -->
 <body class="bg:gray-100 color:gray-800 font:sans leading:150 tracking:tight">
     <div class="wrapper block w:100p max-w:100p">
 
         <!-- Header -->
-        {% include "components/nav/_header.njk" %}
+        {% include "components/include.nav.header.njk" %}
 
         <!-- Page Content -->
         {{ content | safe }}
 
         <!-- Footer -->
-        {% include "components/nav/_footer.njk" %}
+        {% include "components/include.nav.footer.njk" %}
 
     </div>
 
     <!-- Scripts -->
-    {% include "components/base/_scripts.njk" %}
+    {% include "components/include.base.scripts.njk" %}
 
 </body>
 

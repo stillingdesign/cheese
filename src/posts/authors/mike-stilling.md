@@ -1,5 +1,5 @@
 ---
-layout: pages/_author.njk
+layout: components/layout.author.njk
 title: Mike Stilling
 job: Marketing Design
 company: Rewatch

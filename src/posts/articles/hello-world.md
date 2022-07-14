@@ -1,5 +1,5 @@
 ---
-layout: pages/_article.njk
+layout: components/layout.article.njk
 slug: hello-world
 featured: false
 date: 2022-04-16T17:33:51.884Z

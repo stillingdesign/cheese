@@ -1,5 +1,5 @@
 ---
-layout: pages/_tag.njk
+layout: components/layout.tag.njk
 title: Opinion
 socialTitle: Opinions on design
 seoTitle: Opinions - Cheese
